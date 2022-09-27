@@ -35,8 +35,9 @@ public class Lesson04Quiz01Controller {
 	}
 	
 	@RequestMapping("/seller_info")
-	public String getLastSellerInfo(Model model,
-			@RequestParam(value="id", required=false) Integer id) {
+	public String getLastSellerInfo(
+			@RequestParam(value="id", required=false) Integer id,
+			Model model) {
 		
 		Seller seller = (id == null) ? sellerBO.getLastSellerInfo() : sellerBO.getSellerInfoById(id);
 		model.addAttribute("result", seller);
