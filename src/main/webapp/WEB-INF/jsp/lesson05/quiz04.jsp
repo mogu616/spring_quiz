@@ -43,13 +43,17 @@
 						</c:choose>
 					</td>
 					<td>${fn:replace(member.nationality, '시대', ' -')}</td>
+					<td><strong>${fn:split(member.email, '@')[0]}</strong>@${fn:split(member.email, '@')[1]}</td>
 					<td>
-						<c:set var="email1" value="<strong>${fn:substring(member.email, 0, fn:indexOf(member.email, '@'))}</strong>" />
-						<c:set var="email2" value="${fn:substring(member.email, fn:indexOf(member.email, '@'), fn:length(member.email))}" />
-						<c:set var="email" value="${email1 + email2}" />
-						${email}
+						<c:choose>
+							<c:when test="${fn:length(member.introduce) > 15}">
+								${fn:substring(member.introduce, 0, 15)} ...
+							</c:when>
+							<c:otherwise>
+								${member.introduce}
+							</c:otherwise>
+						</c:choose>
 					</td>
-					<td></td>
 				</tr>
 				</c:forEach>
 			</tbody>
