@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.quiz.lesson05.bo.WeatherHistoryBO;
@@ -187,13 +188,25 @@ public class Lesson05Controller {
 	@Autowired
 	private WeatherHistoryBO weatherHistoryBO;
 	
-	@RequestMapping("/quiz05")
-	public String quiz05(Model model) {
+	@RequestMapping("/quiz05/1")
+	public String quiz05_1(
+			Model model) {
 		
-		List<WeatherHistory> weatherHistory = weatherHistoryBO.getWeatherHistoryList();
+		// DB select
+		List<WeatherHistory> weatherhistory = weatherHistoryBO.getWeatherHistoryList();
 		
-		model.addAttribute("weatherHistory", weatherHistory);
+		// model
+		model.addAttribute("weatherHistory", weatherhistory);
 		
-		return "lesson05/quiz05";
+		// return
+		return "lesson05/quiz05_1";
 	}
+	
+	@RequestMapping("/quiz05/2")
+	public String quiz05_2() {
+		return "lesson05/quiz05_2";
+	}
+	
+	@PostMapping("/quiz05/")
+	
 }

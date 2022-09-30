@@ -12,9 +12,13 @@ import com.quiz.lesson05.model.WeatherHistory;
 public class WeatherHistoryBO {
 	
 	@Autowired
-	private WeatherHistoryDAO weatherHistoryDAO;
+	private WeatherHistoryDAO weahterHistoryDAO;
 	
 	public List<WeatherHistory> getWeatherHistoryList() {
-		return weatherHistoryDAO.selectWeatherHistoryList();
+		return weahterHistoryDAO.selectWeatherHistoryList();
+	}
+	
+	public void addWeatherHistoryAsFiled(WeatherHistory weatherHistory) {
+		weahterHistoryDAO.insertWeatherHistoryAsFiled(weatherHistory);
 	}
 }

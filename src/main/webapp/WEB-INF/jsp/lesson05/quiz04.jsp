@@ -34,11 +34,11 @@
 					<td>${member.name}</td>
 					<td>
 						<c:choose>
-							<c:when test="${fn:length(member.phoneNumber) ne 13}">
-								유효하지 않은 전화번호
+							<c:when test="${fn:startsWith(member.phoneNumber, '010')}">
+								${member.phoneNumber}
 							</c:when>
 							<c:otherwise>
-								${member.phoneNumber}
+								유효하지 않은 전화번호
 							</c:otherwise>
 						</c:choose>
 					</td>
