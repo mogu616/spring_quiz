@@ -8,7 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.quiz.lesson05.bo.WeatherHistoryBO;
@@ -207,6 +207,18 @@ public class Lesson05Controller {
 		return "lesson05/quiz05_2";
 	}
 	
-	@PostMapping("/quiz05/")
+	@PostMapping("/quiz05/3")
+	public String quiz05_3(WeatherHistory weatherHistory) {
+		
+		weatherHistoryBO.addWeatherHistoryAsFiled(weatherHistory);
+		
+		return "lesson05/quiz05_1";
+	}
+	
+	@RequestMapping("/quiz06/store_list")
+	public String storeList() {
+		
+		return "lesson06/storeList";
+	}
 	
 }

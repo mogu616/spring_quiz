@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.quiz.lesson06.dao.NewReviewDAO">
+ 	<select id="selectNewReviewById" parameterType="map" resultType="com.quiz.lesson06.model.NewReview">
+ 		SELECT
+ 			new_review.*
+		FROM
+			`new_review`
+		JOIN
+			`store`
+		ON
+			store.id = new_review.storeId
+		WHERE
+			new_review.storeId = #{id}
+ 	</select>
+ </mapper>

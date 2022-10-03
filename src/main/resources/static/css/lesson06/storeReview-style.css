@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+* {
+	border-collapse: collapse;
+	margin:0px;
+	padding:0px;
+	text-decoration: none;
+	color: black;
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+header {
+	width:1200px;
+	height:150px;
+	line-height: 150px;
+	background-color: #12A3B8;
+}
+
+header > .header-text {
+	color: white;
+	font-size: 4rem;
+	font-weight: bold;
+	margin-left: 30px;
+}
+
+.contents {
+	margin-top: 20px;
+}
+
+.review-box {
+	width:1200px;
+	border:2px solid #46B7C8;
+	border-radius: 10px;
+}
+
+.review-info {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+
+.review-info .review-userName {
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+.review-info .review-date {
+	color: #727B82;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.review-info .review-point {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.review-info .review-menu {
+	background-color: #E1E1E1;
+	padding: 5px;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.notReview {
+	height: 200px;
+	line-height: 200px;
+	margin-left: 70px;
+}
+
+footer {
+	width:1200px;
+}
+
+footer > .brand-text {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+footer > .center-text {
+	color: #6F777F;
+	font-size: 1.5rem;
+	font-weight: bold;
+}

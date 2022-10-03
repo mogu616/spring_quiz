@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+* {
+	border-collapse: collapse;
+	margin:0px;
+	padding:0px;
+	text-decoration: none;
+	color: black;
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+header {
+	width:1200px;
+	height:150px;
+	line-height: 150px;
+	background-color: #12A3B8;
+}
+
+header > .header-text {
+	color: white;
+	font-size: 4rem;
+	font-weight: bold;
+	margin-left: 30px;
+}
+
+.contents {
+	margin-top: 20px;
+}
+
+.store-box {
+	width:1200px;
+	height:250px;
+	border:2px solid #46B7C8;
+	border-radius: 10px;
+}
+
+.store-box:hover {
+	background-color: #42B1C1;
+}
+
+.store-info {
+	margin-top: 25px;
+	margin-left: 30px;
+}
+
+.store-info .store-name {
+	font-size: 3.3rem;
+	font-weight: bold;
+}
+
+.store-info .store-tel {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+
+footer {
+	width:1200px;
+}
+footer > .brand-text {
+	font-size: 2rem;
+	font-weight: bold;
+}
+footer > .center-text {
+	color: #6F777F;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
