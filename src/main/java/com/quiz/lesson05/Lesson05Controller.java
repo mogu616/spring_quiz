@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.quiz.lesson05.bo.WeatherHistoryBO;
 import com.quiz.lesson05.model.Member;
@@ -208,17 +209,17 @@ public class Lesson05Controller {
 	}
 	
 	@PostMapping("/quiz05/3")
-	public String quiz05_3(WeatherHistory weatherHistory) {
+	public String quiz05_3(
+			@RequestParam("date") String date,
+			@RequestParam("weather") String weather,
+			@RequestParam("temperatures") double temperatures,
+			@RequestParam("precipitation") double precipitation,
+			@RequestParam("microDust") String microDust,
+			@RequestParam("windSpeed") double windSpeed) {
 		
-		weatherHistoryBO.addWeatherHistoryAsFiled(weatherHistory);
+		weatherHistoryBO.addWeatherHistoryAsFiled(date, weather, temperatures, precipitation, microDust, windSpeed);
 		
 		return "lesson05/quiz05_1";
-	}
-	
-	@RequestMapping("/quiz06/store_list")
-	public String storeList() {
-		
-		return "lesson06/storeList";
 	}
 	
 }

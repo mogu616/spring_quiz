@@ -17,7 +17,7 @@
 		FROM
 			`weather_history`
  	</select>
- 	<insert id="insertWeatherHistoryAsFiled" parameterType="com.quiz.lesson05.model.WeatherHistory">
+ 	<insert id="insertWeatherHistoryAsFiled" parameterType="map">
  		INSERT INTO `weather_history`
  		(
 			`date`

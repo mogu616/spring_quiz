@@ -39,7 +39,6 @@
 							<div class="form-group d-flex">
 								<label for="date">날짜</label>
 								<input type="text" id="date" name="date" class="form-control col-3">
-								<fmt:parseDate value="${param.date}" pattern="yyyy년 M월 d일" />
 							</div>
 							<div class="form-group d-flex">
 								<label for="weather">날씨</label>
