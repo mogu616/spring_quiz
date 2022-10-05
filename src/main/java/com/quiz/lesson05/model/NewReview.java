@@ -1,4 +1,4 @@
-package com.quiz.lesson06.model;
+package com.quiz.lesson05.model;
 
 import java.util.Date;
 

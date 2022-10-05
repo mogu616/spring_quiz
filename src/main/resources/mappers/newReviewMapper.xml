@@ -2,10 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
- <mapper namespace="com.quiz.lesson06.dao.NewReviewDAO">
- 	<select id="selectNewReviewById" parameterType="map" resultType="com.quiz.lesson06.model.NewReview">
+ <mapper namespace="com.quiz.lesson05.dao.NewReviewDAO">
+ 	<select id="selectNewReviewById" parameterType="map" resultType="com.quiz.lesson05.model.NewReview">
  		SELECT
- 			new_review.*
+ 			new_review.id
+			,new_review.storeId
+			,new_review.menu
+			,new_review.userName
+			,new_review.point
+			,new_review.review
+			,new_review.createdAt
+			,new_review.updatedAt
 		FROM
 			`new_review`
 		JOIN

@@ -1,12 +1,12 @@
-package com.quiz.lesson06.bo;
+package com.quiz.lesson05.bo;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.quiz.lesson06.dao.NewReviewDAO;
-import com.quiz.lesson06.model.NewReview;
+import com.quiz.lesson05.dao.NewReviewDAO;
+import com.quiz.lesson05.model.NewReview;
 
 @Service
 public class NewReviewBO {

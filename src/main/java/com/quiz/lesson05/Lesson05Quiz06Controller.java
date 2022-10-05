@@ -1,4 +1,4 @@
-package com.quiz.lesson06;
+package com.quiz.lesson05;
 
 import java.util.List;
 
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.quiz.lesson02.bo.StoreBO;
 import com.quiz.lesson02.model.Store;
-import com.quiz.lesson06.bo.NewReviewBO;
-import com.quiz.lesson06.model.NewReview;
+import com.quiz.lesson05.bo.NewReviewBO;
+import com.quiz.lesson05.model.NewReview;
 
 @Controller
-@RequestMapping("/lesson06")
-public class Lesson06Controller {
+@RequestMapping("/lesson05")
+public class Lesson05Quiz06Controller {
 	
 	@Autowired
 	private StoreBO storeBO;
@@ -30,13 +30,13 @@ public class Lesson06Controller {
 		
 		model.addAttribute("storeList", storeList);
 		
-		return "lesson06/storeList";
+		return "lesson05/storeList";
 	}
 	
 	@GetMapping("/quiz06/store_review")
 	public String storeReview(
-			@RequestParam(value="id", required=false) int id,
-			@RequestParam(value="name", required=false) String name,
+			@RequestParam("id") int id,
+			@RequestParam("name") String name,
 			Model model) {
 		
 		List<NewReview> storeReview = NewReviewBO.getNewReviewById(id, name);
@@ -44,7 +44,7 @@ public class Lesson06Controller {
 		model.addAttribute("storeReview", storeReview);
 		model.addAttribute("name", name);
 		
-		return "lesson06/storeReview";
+		return "lesson05/storeReview";
 		
 	}
 }
